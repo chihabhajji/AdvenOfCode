@@ -1,5 +1,7 @@
 package tn.esprit.dayTwo;
 
+import tn.esprit.helpers.PathToFile;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +10,7 @@ public class DayTwoPuzzleTwo {
     public static void main(String[] args) {
         int horizontal = 0 , depth = 0 , aim = 0 , val;
         String line;
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\black\\IdeaProjects\\AoC\\tn.esprit.resources\\dayTwo.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayTwo.txt")))) {
             while ((line = br.readLine()) != null) {
                 if(line.startsWith("up")){
                     val = Integer.parseInt(line.replace("up ",""));
