@@ -1,4 +1,4 @@
-package tn.esprit.dayTwo;
+package tn.esprit.twentyOne.dayTwo;
 
 import tn.esprit.helpers.PathToFile;
 
@@ -28,10 +28,7 @@ public class DayTwoPuzzleTwo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Horizontal :"+horizontal);
-        System.out.println("Depth      :" +depth);
-        System.out.println("Sum        :" + horizontal*depth);
-
+        System.out.println(horizontal*depth);
         // Horizontal :2083
         // Depth      :1002964
         // Sum        :2089174012

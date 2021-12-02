@@ -1,6 +1,7 @@
-package tn.esprit.dayOne;
+package tn.esprit.twentyOne.dayOne;
 
 import tn.esprit.helpers.PathToFile;
+import tn.esprit.twentyOne.dayTwo.DayTwoPuzzleOne;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
