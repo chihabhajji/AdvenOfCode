@@ -1,16 +1,15 @@
-package tn.esprit.twentyOne.dayTwo;
+package tn.esprit.twenty_one.week_one.day_two;
 
 import tn.esprit.helpers.PathToFile;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class DayTwoPuzzleTwo {
     public static void main(String[] args) {
         int horizontal = 0 , depth = 0 , aim = 0 , val;
         String line;
-        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayTwo.txt")))) {
+        try (BufferedReader br = PathToFile.pathToBufferReader("dayTwo.txt")){
             while ((line = br.readLine()) != null) {
                 if(line.startsWith("up")){
                     val = Integer.parseInt(line.replace("up ",""));

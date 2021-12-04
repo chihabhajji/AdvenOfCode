@@ -1,28 +1,28 @@
-package tn.esprit.twentyOne.dayThree;
+package tn.esprit.twenty_one.week_one.day_three;
 
 import tn.esprit.helpers.PathToFile;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class DayThreePuzzleOne {
     public static void main(String[] args) {
         // CANT I SOLVE THIS USING HASH ?
-        String gammaRate = "", epsilonRate = "";
+        StringBuilder gammaRate = new StringBuilder();
+        StringBuilder epsilonRate = new StringBuilder();
         int[][] diagnostics = new int[1000][12];
         String line;
         int i = 0;
-        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayThree.txt")))) {
+        try (BufferedReader br = PathToFile.pathToBufferReader("dayThree.txt")) {
             while ((line = br.readLine()) != null) {
                 char[] chararray = line.toCharArray();
-                for(int j = 0; j< 12; j++){
+                for(int j = 0; j< 12; j++)
                     diagnostics[i][j] = Integer.parseInt(String.valueOf(chararray[j]));
-                }
                 i++;
             }
             for (int j = 0; j < 12; j++) {
-                int zeros = 0, ones = 0;
+                int zeros = 0;
+                int ones = 0;
                 for (int k = 0; k < 1000; k++) {
                     if(diagnostics[k][j] == 0)
                         zeros ++;
@@ -30,14 +30,14 @@ public class DayThreePuzzleOne {
                         ones ++;
                 }
                 if (zeros > ones){
-                    gammaRate += "0";
-                    epsilonRate += "1";
+                    gammaRate.append("0");
+                    epsilonRate.append("1");
                 }else{
-                    gammaRate += "1";
-                    epsilonRate += "0";
+                    gammaRate.append("1");
+                    epsilonRate.append("0");
                 }
             }
-            System.out.println(Long.parseLong(gammaRate, 2) * Long.parseLong(epsilonRate, 2));
+            System.out.println(Long.parseLong(gammaRate.toString(), 2) * Long.parseLong(epsilonRate.toString(), 2));
             // 3923414
         } catch (IOException e) {
             e.printStackTrace();

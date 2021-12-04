@@ -1,11 +1,11 @@
 package tn.esprit;
 
-import tn.esprit.twentyOne.dayOne.DayOnePuzzleOne;
-import tn.esprit.twentyOne.dayOne.DayOnePuzzleTwo;
-import tn.esprit.twentyOne.dayThree.DayThreePuzzleOne;
-import tn.esprit.twentyOne.dayThree.DayThreePuzzleTwo;
-import tn.esprit.twentyOne.dayTwo.DayTwoPuzzleOne;
-import tn.esprit.twentyOne.dayTwo.DayTwoPuzzleTwo;
+import tn.esprit.twenty_one.week_one.day_one.DayOnePuzzleOne;
+import tn.esprit.twenty_one.week_one.day_one.DayOnePuzzleTwo;
+import tn.esprit.twenty_one.week_one.day_three.DayThreePuzzleOne;
+import tn.esprit.twenty_one.week_one.day_three.DayThreePuzzleTwo;
+import tn.esprit.twenty_one.week_one.day_two.DayTwoPuzzleOne;
+import tn.esprit.twenty_one.week_one.day_two.DayTwoPuzzleTwo;
 
 import java.util.Scanner;
 

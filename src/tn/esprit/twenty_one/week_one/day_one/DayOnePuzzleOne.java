@@ -1,15 +1,13 @@
-package tn.esprit.twentyOne.dayOne;
+package tn.esprit.twenty_one.week_one.day_one;
 
 import tn.esprit.helpers.PathToFile;
-import tn.esprit.twentyOne.dayTwo.DayTwoPuzzleOne;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class DayOnePuzzleOne {
     public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayOne.txt"))))
+        try (BufferedReader br = new BufferedReader(PathToFile.pathToBufferReader("dayOne.txt")))
         {
             String line;
             int prev = 0;

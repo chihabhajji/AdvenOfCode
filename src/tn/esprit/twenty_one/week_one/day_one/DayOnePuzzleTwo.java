@@ -1,9 +1,8 @@
-package tn.esprit.twentyOne.dayOne;
+package tn.esprit.twenty_one.week_one.day_one;
 
 import tn.esprit.helpers.PathToFile;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ public class DayOnePuzzleTwo {
     public static void main(String[] args) {
         List<Integer> input = new ArrayList<>();
         String line;
-        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayOne.txt")))) {
+        try (BufferedReader br = PathToFile.pathToBufferReader("dayOne.txt")) {
             while ((line = br.readLine()) != null) {
                 input.add(Integer.parseInt(line));
             }

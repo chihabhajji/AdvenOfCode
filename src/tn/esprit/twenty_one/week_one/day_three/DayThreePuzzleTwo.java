@@ -1,9 +1,8 @@
-package tn.esprit.twentyOne.dayThree;
+package tn.esprit.twenty_one.week_one.day_three;
 
 import tn.esprit.helpers.PathToFile;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -17,7 +16,7 @@ public class DayThreePuzzleTwo {
         String line;
         Set<String> remainingOxygen = new HashSet<>();
         Set<String> remainingCo2 = new HashSet<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(PathToFile.convertActual("dayThree.txt")))) {
+        try (BufferedReader br = PathToFile.pathToBufferReader("dayThree.txt")) {
             while ((line = br.readLine()) != null) {
                 if(line.charAt(0) == '0') zeros++; else ones++;
                 remainingOxygen.add(line);
@@ -27,6 +26,7 @@ public class DayThreePuzzleTwo {
             e.printStackTrace();
         }
         Object o = checkForRemaining(remainingOxygen, oxygen, 1, zeros, ones,'O');
+        // it shouldnt work without holding a reference to zeros and ones, but it does!
         Object c = checkForRemaining(remainingCo2, co2, 1, zeros , ones, 'C');
         System.out.println(Long.parseLong(c.toString(), 2) * Long.parseLong(o.toString(), 2));
         // 5852595
